@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Meme Generator</title>
+  </head>
+  <body>
+    <section class="gallery grid"></section>
+    <div class="meme-editor">
+      <div class="input-container">
+        <label for="meme-text">Add your meme text<input data-input-num="0" oninput="onSetChangeText(this)" type="text" name="meme-text" id="meme-text" placeholder="Enter your texet here"></label>
+        <label for="color-fill-input">Choose the text fill color<input type="color" value="#FFFFFF" onchange="onSetColorFill(this.value)" name="color-fill-input" class="color-fill-input"></label>
+        <label for="color-stroke-input">Choose the text fill color<input type="color" onchange="onSetColorStroke(this.value)" name="color-stroke-input" class="color-stroke-input"></label>
+      </div> 
+      <div class="font-settings">
+        <button onclick="onSetIncreaseText()" >🅰️➕</button>
+        <button onclick="onSetDecreaseText()" >🅰️➖</button>
+      </div> 
+
+      <div class="canvas-container">
+        <canvas id="my-canvas" height="500" width="500"></canvas>
+      </div>
+    </div>
+
+    <script src="js/gvars.js"></script>
+    <script src="js/meme.services.js"></script>
+    <script src="js/gallery.services.js"></script>
+    <script src="js/meme.controller.js"></script>
+    <script src="js/galleryController.js"></script>
+  </body>
+</html>
